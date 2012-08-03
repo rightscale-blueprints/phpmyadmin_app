@@ -1,0 +1,13 @@
+{
+  "phpmyadmin_application": {
+    "db": {
+      "host":"sandbox.services.rightscale.me"
+    }
+  },
+  "collectd" : {
+    "servers": [ "foo.bar.suf" ],
+    "hostname": "01-1234ABC",
+    "fqdn_lookup": "false"
+  },
+  "run_list": [ "recipe[system]", "recipe[resolver]", "recipe[rightscale]", "recipe[phpmyadmin_application]" ]
+}
