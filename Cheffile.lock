@@ -39,6 +39,14 @@ GIT
 
 GIT
   remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/phpmyadmin_application
+  ref: master
+  sha: 8530eb896eb6d71201e72280c471992fec462e14
+  specs:
+    phpmyadmin_application (0.0.1)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
   path: cookbooks/resolver
   ref: master
   sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
@@ -90,6 +98,7 @@ DEPENDENCIES
   cron (>= 0)
   mysql (>= 0)
   ntp (>= 0)
+  phpmyadmin_application (>= 0)
   resolver (>= 0)
   rightscale (>= 0)
   sudo (>= 0)

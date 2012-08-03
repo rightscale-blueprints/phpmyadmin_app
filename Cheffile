@@ -44,3 +44,8 @@ cookbook 'application_php',
    :git => 'https://github.com/flaccid/cookbooks',
    :path => 'cookbooks/application_php',
    :ref => 'master'
+
+cookbook 'phpmyadmin_application',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/phpmyadmin_application',
+   :ref => 'master'
