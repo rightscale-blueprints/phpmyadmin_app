@@ -1,5 +1,5 @@
 # Cookbook Name:: phpmyadmin_application
-# Recipe:: default
+# Recipe:: php_mysql
 #
 # Copyright 2012, Chris Fordham
 #
@@ -14,6 +14,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
 
-include_recipe "phpmyadmin_application::application"	
+log "Setting up php/mysql"
+
+case node['platform']
+when "redhat","centos","scientific","fedora","suse","amazon"
+  package "php-mysql"
+when "debian","ubuntu"
+  package "php5-mysql"
+  package "libapache2-mod-auth-mysql"
+end
