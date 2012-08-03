@@ -1,12 +1,8 @@
 {
-  "mediawiki_application": {
-  "db": {
-    "host":"localhost",
-    "schema":"phpmyadmin",
-    "adapter":"mysql",
-    "username":"phpmyadmin",
-    "password":"donotusethisinproduction,changeme"
-  }
-},
+  "phpmyadmin_application": {
+    "db": {
+      "host":"sandbox.services.rightscale.me"
+    }
+  },
   "run_list": [ "recipe[phpmyadmin_application]" ]
 }
