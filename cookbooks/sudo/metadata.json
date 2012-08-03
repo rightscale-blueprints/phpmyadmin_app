@@ -1,0 +1,118 @@
+{
+  "maintainer": "Opscode, Inc.",
+  "recipes": {
+    "sudo": "Installs sudo and configures /etc/sudoers"
+  },
+  "replacing": {
+  },
+  "suggestions": {
+  },
+  "dependencies": {
+  },
+  "description": "Installs sudo and configures /etc/sudoers",
+  "version": "1.1.1",
+  "recommendations": {
+  },
+  "conflicting": {
+  },
+  "providing": {
+  },
+  "name": "sudo",
+  "groupings": {
+  },
+  "platforms": {
+    "freebsd": ">= 0.0.0",
+    "fedora": ">= 0.0.0",
+    "centos": ">= 0.0.0",
+    "debian": ">= 0.0.0",
+    "ubuntu": ">= 0.0.0",
+    "redhat": ">= 0.0.0"
+  },
+  "attributes": {
+    "authorization/sudo/include_sudoers_d": {
+      "display_name": "Include sudoers.d",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "default": "false",
+      "calculated": false,
+      "description": "Whether to create the sudoers.d includedir",
+      "type": "string",
+      "required": "optional"
+    },
+    "authorization": {
+      "display_name": "Authorization",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "description": "Hash of Authorization attributes",
+      "type": "hash",
+      "required": "optional"
+    },
+    "authorization/sudo": {
+      "display_name": "Authorization Sudoers",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "calculated": false,
+      "description": "Hash of Authorization/Sudo attributes",
+      "type": "hash",
+      "required": "optional"
+    },
+    "authorization/sudo/users": {
+      "display_name": "Sudo Users",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "default": "",
+      "calculated": false,
+      "description": "Users who are allowed sudo ALL",
+      "type": "array",
+      "required": "optional"
+    },
+    "authorization/sudo/passwordless": {
+      "display_name": "Passwordless Sudo",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "default": "false",
+      "calculated": false,
+      "description": "",
+      "type": "string",
+      "required": "optional"
+    },
+    "authorization/sudo/groups": {
+      "display_name": "Sudo Groups",
+      "recipes": [
+
+      ],
+      "choice": [
+
+      ],
+      "default": "",
+      "calculated": false,
+      "description": "Groups who are allowed sudo ALL",
+      "type": "array",
+      "required": "optional"
+    }
+  },
+  "license": "Apache 2.0",
+  "maintainer_email": "cookbooks@opscode.com",
+  "long_description": ""
+}
