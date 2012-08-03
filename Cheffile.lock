@@ -1,0 +1,97 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    build-essential (1.1.0)
+    collectd (1.0.0)
+    openssl (1.0.0)
+    php (1.0.2)
+      build-essential (>= 0.0.0)
+      mysql (>= 0.0.0)
+      xml (>= 0.0.0)
+    xml (1.0.4)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/apache2
+  ref: master
+  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  specs:
+    apache2 (1.1.10)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/application_php
+  ref: master
+  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  specs:
+    application_php (1.0.0)
+      apache2 (>= 0.0.0)
+      php (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/mysql
+  ref: master
+  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  specs:
+    mysql (1.2.7)
+      openssl (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/resolver
+  ref: master
+  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  specs:
+    resolver (0.8.2)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/rightscale
+  ref: master
+  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  specs:
+    rightscale (0.0.1)
+      collectd (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/system
+  ref: master
+  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  specs:
+    system (0.0.1)
+      cron (>= 0.0.0)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/cron
+  ref: master
+  sha: cc9ce3c83ce8bafa327664803ab63a05182c5ce4
+  specs:
+    cron (1.0.1)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/ntp
+  ref: master
+  sha: 3991185e38b07a09f8a6a4994dc6d778670a11a2
+  specs:
+    ntp (1.1.9)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/sudo
+  ref: master
+  sha: e08de50f3d9327edb55676b1b6adb113ddc819dc
+  specs:
+    sudo (1.1.1)
+
+DEPENDENCIES
+  apache2 (>= 0)
+  application_php (>= 0)
+  cron (>= 0)
+  mysql (>= 0)
+  ntp (>= 0)
+  resolver (>= 0)
+  rightscale (>= 0)
+  sudo (>= 0)
+  system (>= 0)
+

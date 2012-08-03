@@ -3,13 +3,44 @@
 
 site 'http://community.opscode.com/api/v1'
 
-# cookbook 'chef-client'
+cookbook 'system',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/system',
+   :ref => 'master'
 
-# cookbook 'apache2', '>= 1.0.0'
+cookbook 'rightscale',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/rightscale',
+   :ref => 'master'
 
-# cookbook 'rvm',
-#   :git => 'https://github.com/fnichol/chef-rvm'
+cookbook 'resolver',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/resolver',
+   :ref => 'master'
+   
+cookbook 'cron',
+   :git => 'https://github.com/opscode-cookbooks/cron',
+   :ref => 'master'
 
-# cookbook 'postgresql',
-#   :git => 'https://github.com/findsyou/cookbooks',
-#   :ref => 'postgresql-improvements'
+cookbook 'ntp',
+   :git => 'https://github.com/opscode-cookbooks/ntp',
+   :ref => 'master'
+
+cookbook 'sudo',
+   :git => 'https://github.com/opscode-cookbooks/sudo',
+   :ref => 'master'
+
+cookbook 'apache2',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/apache2',
+   :ref => 'master'
+
+cookbook 'mysql',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/mysql',
+   :ref => 'master'
+   
+cookbook 'application_php',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/application_php',
+   :ref => 'master'
