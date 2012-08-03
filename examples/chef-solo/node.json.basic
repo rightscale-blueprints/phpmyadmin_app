@@ -1,0 +1,8 @@
+{
+  "mediawiki_application": {
+  "db": {
+    "host":"foo.bar.suf",
+  }
+},
+  "run_list": [ "recipe[phpmyadmin_application]" ]
+}
