@@ -17,7 +17,15 @@ cookbook 'resolver',
    :git => 'https://github.com/flaccid/cookbooks',
    :path => 'cookbooks/resolver',
    :ref => 'master'
-   
+
+cookbook 'git',
+   :git => 'https://github.com/opscode-cookbooks/git',
+   :ref => 'master'
+
+cookbook 'subversion',
+   :git => 'https://github.com/opscode-cookbooks/subversion',
+   :ref => 'master'
+            
 cookbook 'cron',
    :git => 'https://github.com/opscode-cookbooks/cron',
    :ref => 'master'
@@ -38,6 +46,11 @@ cookbook 'apache2',
 cookbook 'mysql',
    :git => 'https://github.com/flaccid/cookbooks',
    :path => 'cookbooks/mysql',
+   :ref => 'master'
+
+cookbook 'application',
+   :git => 'https://github.com/flaccid/cookbooks',
+   :path => 'cookbooks/application',
    :ref => 'master'
    
 cookbook 'application_php',

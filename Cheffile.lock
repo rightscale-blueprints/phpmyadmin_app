@@ -2,27 +2,61 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     build-essential (1.1.0)
+    chef_handler (1.0.6)
     collectd (1.0.0)
+    dmg (1.0.0)
+    gunicorn (1.0.0)
+      python (>= 0)
+    java (1.5.2)
     openssl (1.0.0)
+    passenger_apache2 (0.99.4)
+      apache2 (>= 1.0.4)
+      build-essential (>= 0.0.0)
     php (1.0.2)
       build-essential (>= 0.0.0)
       mysql (>= 0.0.0)
       xml (>= 0.0.0)
+    python (1.0.8)
+      build-essential (>= 0.0.0)
+      yum (>= 0.0.0)
+    runit (0.15.0)
+    tomcat (0.10.4)
+      java (>= 0.0.0)
+    unicorn (1.0.0)
+    windows (1.3.2)
+      chef_handler (>= 0.0.0)
     xml (1.0.4)
+    yum (0.8.0)
 
 GIT
   remote: https://github.com/flaccid/cookbooks
   path: cookbooks/apache2
   ref: master
-  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  sha: a5c2c3a3d9167ce064b9b2bbbc1ed7f90484c1c0
   specs:
     apache2 (1.1.10)
 
 GIT
   remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/application
+  ref: master
+  sha: a5c2c3a3d9167ce064b9b2bbbc1ed7f90484c1c0
+  specs:
+    application (1.0.0)
+      apache2 (>= 0.0.0)
+      gunicorn (>= 0.0.0)
+      passenger_apache2 (>= 0.0.0)
+      php (>= 0.0.0)
+      python (>= 1.0.6)
+      runit (>= 0.0.0)
+      tomcat (>= 0.0.0)
+      unicorn (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
   path: cookbooks/application_php
   ref: master
-  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  sha: a5c2c3a3d9167ce064b9b2bbbc1ed7f90484c1c0
   specs:
     application_php (1.0.0)
       apache2 (>= 0.0.0)
@@ -32,7 +66,7 @@ GIT
   remote: https://github.com/flaccid/cookbooks
   path: cookbooks/mysql
   ref: master
-  sha: 910a195aa24c617ecb3b2c11167dec7d1ad03b72
+  sha: a5c2c3a3d9167ce064b9b2bbbc1ed7f90484c1c0
   specs:
     mysql (1.2.7)
       openssl (>= 0.0.0)
@@ -41,9 +75,17 @@ GIT
   remote: https://github.com/flaccid/cookbooks
   path: cookbooks/phpmyadmin_application
   ref: master
-  sha: 8530eb896eb6d71201e72280c471992fec462e14
+  sha: a5c2c3a3d9167ce064b9b2bbbc1ed7f90484c1c0
   specs:
     phpmyadmin_application (0.0.1)
+      apache2 (>= 0.0.0)
+      application (>= 0.0.0)
+      application_php (>= 0.0.0)
+      git (>= 0.0.0)
+      passenger_apache2 (>= 0.0.0)
+      php (>= 0.0.0)
+      runit (>= 0.0.0)
+      subversion (>= 0.0.0)
 
 GIT
   remote: https://github.com/flaccid/cookbooks
@@ -79,11 +121,30 @@ GIT
     cron (1.0.1)
 
 GIT
+  remote: https://github.com/opscode-cookbooks/git
+  ref: master
+  sha: 06ff406aad523e77d4adccaa4fe719c51a2a63f1
+  specs:
+    git (1.0.0)
+      dmg (>= 0.0.0)
+      runit (>= 0.0.0)
+      yum (>= 0.0.0)
+
+GIT
   remote: https://github.com/opscode-cookbooks/ntp
   ref: master
   sha: 3991185e38b07a09f8a6a4994dc6d778670a11a2
   specs:
     ntp (1.1.9)
+
+GIT
+  remote: https://github.com/opscode-cookbooks/subversion
+  ref: master
+  sha: 747f72ec72b5fc0e02d3852a98b44601139fe420
+  specs:
+    subversion (1.0.0)
+      apache2 (>= 0.0.0)
+      windows (>= 0.0.0)
 
 GIT
   remote: https://github.com/opscode-cookbooks/sudo
@@ -94,13 +155,16 @@ GIT
 
 DEPENDENCIES
   apache2 (>= 0)
+  application (>= 0)
   application_php (>= 0)
   cron (>= 0)
+  git (>= 0)
   mysql (>= 0)
   ntp (>= 0)
   phpmyadmin_application (>= 0)
   resolver (>= 0)
   rightscale (>= 0)
+  subversion (>= 0)
   sudo (>= 0)
   system (>= 0)
 
